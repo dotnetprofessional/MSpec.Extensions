@@ -1,0 +1,346 @@
+<html>
+<head>
+  <title>Machine.Specifications Report</title>
+  <style type="text/css">body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .9em;
+}
+
+.count {
+  color: lightgrey;
+}
+
+.failure, .notimplemented, .ignored {
+  color: red;
+  font-weight: bold;
+  display: inline;
+}
+
+.notimplemented {
+  color: orange;
+}
+
+.ignored {
+  color: gold;
+}
+
+p.exception_type {
+  color: black;
+  font-weight: bold;
+  display: inline;
+}
+
+pre.exception_message {
+  border-style: dashed;
+  border-color: #FF828D;
+  border-width: thin;
+  background-color: #FFD2CF;
+  white-space: pre-wrap; /* CSS2.1 compliant */
+  white-space: -moz-pre-wrap; /* Mozilla-based browsers */
+  white-space: o-pre-wrap; /* Opera 7+ */
+  padding: 1em;
+}
+
+hr {
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  height: 1px;
+}
+
+ul.prev-next {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  }
+  
+.spec ul.prev-next {
+  float: right;
+  right: 30%;
+  position: absolute;
+  margin-top: -1em;
+  }
+
+ul.prev-next li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+ul.prev-next li a {
+  color: lightgrey;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 .3em;
+  border: 1px solid lightgrey;
+}
+
+ul.prev-next li.failure a {
+  border-color: red;
+}
+
+ul.prev-next li.notimplemented a {
+  border-color: orange;
+}
+
+ul.prev-next li.ignored a {
+  border-color: gold;
+}
+
+ul.prev-next li.failure a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+ul.prev-next li.notimplemented a:hover {
+  background-color: orange;
+  color: #000;
+}
+
+ul.prev-next li.ignored a:hover {
+  background-color: gold;
+  color: #000;
+}
+
+ul.prev-next li.back a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+div.supplement {
+  display: none;
+}
+  
+@media print {
+  ul.prev-next {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <ul class="prev-next">
+    <li class="back">
+      <a href="index.html" title="Go back to the report summary">&laquo; Back</a>
+    </li>
+    <li class="notimplemented">
+      <a href="#1">Go to first not implemented specification &dArr;</a>
+    </li>
+  </ul>
+  <h1>
+    MSpec.Extensions.Vanilla.Spec
+</h1>
+<h2 class="count">
+  2 concerns,
+  6 contexts,
+  6 specifications
+  ,
+    <span class="notimplemented">6 not implemented specs</span>
+</h2>
+<script type="text/javascript">
+  function toggleVisibility(id, description)
+  {
+    var section = document.getElementById(id);
+    var link = document.getElementById(id + "_link");
+
+    if (section.style.display == "block")
+    {
+      section.style.display = "none";
+      link.innerHTML = "Show " + description;
+    } else
+    {
+      section.style.display = "block";
+      link.innerHTML = "Hide " + description;
+    }
+  };
+</script> 
+  
+  <em>Generated on Tuesday, March 25, 2014 at 3:34:11 PM.</em>
+  <hr/>
+  <hr/>
+  
+  <h2 class="concern">
+  Scenario: Calculate status based on targets in green yellow red order specifications
+</h2>
+<h3 class="count">
+  3 contexts, 3 specifications
+</h3><h3 class="context">
+  When the value is 0
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="1">the status should be green</span>
+
+
+<div class="notimplemented">
+  &lArr; NOT IMPLEMENTED
+  <ul class="prev-next">
+    <li class="prev notimplemented">
+    </li>
+    <li class="next notimplemented">
+      <a href="#2" title="Go to next not implemented specification">&dArr;</a>
+    </li>
+  </ul>
+</div>
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  When the value is 20
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="2">the status should be green</span>
+
+
+<div class="notimplemented">
+  &lArr; NOT IMPLEMENTED
+  <ul class="prev-next">
+    <li class="prev notimplemented">
+      <a href="#1" title="Go to previous not implemented specification">&uArr;</a>
+    </li>
+    <li class="next notimplemented">
+      <a href="#3" title="Go to next not implemented specification">&dArr;</a>
+    </li>
+  </ul>
+</div>
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  When the value is 40
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="3">the status should be yellow</span>
+
+
+<div class="notimplemented">
+  &lArr; NOT IMPLEMENTED
+  <ul class="prev-next">
+    <li class="prev notimplemented">
+      <a href="#2" title="Go to previous not implemented specification">&uArr;</a>
+    </li>
+    <li class="next notimplemented">
+      <a href="#4" title="Go to next not implemented specification">&dArr;</a>
+    </li>
+  </ul>
+</div>
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  Scenario: Calculate status based on targets in red yellow green order specifications
+</h2>
+<h3 class="count">
+  3 contexts, 3 specifications
+</h3><h3 class="context">
+  When the value is 0
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="4">the status should be red</span>
+
+
+<div class="notimplemented">
+  &lArr; NOT IMPLEMENTED
+  <ul class="prev-next">
+    <li class="prev notimplemented">
+      <a href="#3" title="Go to previous not implemented specification">&uArr;</a>
+    </li>
+    <li class="next notimplemented">
+      <a href="#5" title="Go to next not implemented specification">&dArr;</a>
+    </li>
+  </ul>
+</div>
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  When the value is 20
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="5">the status should be red</span>
+
+
+<div class="notimplemented">
+  &lArr; NOT IMPLEMENTED
+  <ul class="prev-next">
+    <li class="prev notimplemented">
+      <a href="#4" title="Go to previous not implemented specification">&uArr;</a>
+    </li>
+    <li class="next notimplemented">
+      <a href="#6" title="Go to next not implemented specification">&dArr;</a>
+    </li>
+  </ul>
+</div>
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  When the value is 40
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="6">the status should be yellow</span>
+
+
+<div class="notimplemented">
+  &lArr; NOT IMPLEMENTED
+  <ul class="prev-next">
+    <li class="prev notimplemented">
+      <a href="#5" title="Go to previous not implemented specification">&uArr;</a>
+    </li>
+    <li class="next notimplemented">
+    </li>
+  </ul>
+</div>
+
+
+ 
+
+ 
+
+          </li>
+        </ul>
+    <hr/>
+</body>
+</html>

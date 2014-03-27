@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MSpec>
+  <generated>
+    <date>Monday, March 17, 2014</date>
+    <time>1:13:38 AM</time>
+  </generated>
+  <run time="261" />
+  <assembly name="MSpec.Extensions.Spec" location="D:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\bin\Debug\MSpec.Extensions.Spec.dll" time="213">
+    <output></output>
+    <concern name="Read MSpec xml output into a Bdd model instance">
+      <context name="When reading the xml output the MSpec model" type-name="MSpec.Extensions.Spec.Match_customer_specification.Include_stories_in_code.Read_MSpec_Xml_ouput_into_model+Read_into_MSpec_model_instance+When_reading_the_xml_output_the_MSpec_model" time="124">
+        <output></output>
+        <specification leader="it" name="should not fail to load" field-name="should_not_fail_to_load" status="passed" time="101">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have 1 assemblies" field-name="should_have_1_assemblies" status="passed" time="2">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have 1 conerns" field-name="should_have_1_conerns" status="passed" time="0">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have the concern name" field-name="should_have_the_concern_name" status="passed" time="7">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have 3 contexts" field-name="should_have_3_contexts" status="passed" time="0">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have the context name" field-name="should_have_the_context_name" status="passed" time="0">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have 1 specification" field-name="should_have_1_specification" status="passed" time="0">
+          <output></output>
+        </specification>
+        <specification leader="it" name="should have the specification name" field-name="should_have_the_specification_name" status="passed" time="1">
+          <output></output>
+        </specification>
+      </context>
+    </concern>
+    <concern name="Scenario: Calculate status based on targets">
+      <context name="When the value is 0" type-name="MSpec.Extensions.Spec.SampleSpec._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_0" time="3">
+        <output></output>
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="2">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 20" type-name="MSpec.Extensions.Spec.SampleSpec._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_20" time="2">
+        <output></output>
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="1">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 40" type-name="MSpec.Extensions.Spec.SampleSpec._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_40" time="1">
+        <output></output>
+        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="not-implemented" time="1">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 0" type-name="MSpec.Extensions.Spec.SampleSpec._95th_Percentile+Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_0" time="1">
+        <output></output>
+        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="1">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 20" type-name="MSpec.Extensions.Spec.SampleSpec._95th_Percentile+Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_20" time="2">
+        <output></output>
+        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="1">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 40" type-name="MSpec.Extensions.Spec.SampleSpec._95th_Percentile+Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_40" time="1">
+        <output></output>
+        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="not-implemented" time="1">
+          <output></output>
+        </specification>
+      </context>
+    </concern>
+  </assembly>
+</MSpec>

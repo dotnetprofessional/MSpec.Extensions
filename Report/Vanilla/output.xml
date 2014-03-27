@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MSpec>
+  <generated>
+    <date>Tuesday, March 18, 2014</date>
+    <time>10:40:42 PM</time>
+  </generated>
+  <run time="165" />
+  <assembly name="MSpec.Extensions.Vanilla.Spec" location="D:\dev\git\MSpec.Extensions\MSpec.Extensions.Vanilla.Spec\bin\Debug\MSpec.Extensions.Vanilla.Spec.dll" time="107">
+    <output></output>
+    <concern name="Scenario: Calculate status based on targets in green yellow red order">
+      <context name="When the value is 0" type-name="MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_0" time="28">
+        <output></output>
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="22">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 20" type-name="MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_20" time="1">
+        <output></output>
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="1">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 40" type-name="MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_40" time="0">
+        <output></output>
+        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="not-implemented" time="0">
+          <output></output>
+        </specification>
+      </context>
+    </concern>
+    <concern name="Scenario: Calculate status based on targets in red yellow green order">
+      <context name="When the value is 0" type-name="MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_0" time="0">
+        <output></output>
+        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="0">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 20" type-name="MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_20" time="0">
+        <output></output>
+        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="0">
+          <output></output>
+        </specification>
+      </context>
+      <context name="When the value is 40" type-name="MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_40" time="3">
+        <output></output>
+        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="not-implemented" time="3">
+          <output></output>
+        </specification>
+      </context>
+    </concern>
+  </assembly>
+</MSpec>

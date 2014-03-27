@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="MSpec.Extensions.Model.Bdd.Epic">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bdd\Epic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MSpec.Extensions.Model.Bdd.Feature">
+    <Position X="4" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bdd\Feature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Stories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MSpec.Extensions.Model.Bdd.Senario">
+    <Position X="7" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAQAAAAUAAIAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bdd\Senario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MSpec.Extensions.Model.Bdd.Story">
+    <Position X="7" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bdd\Story.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Senarios" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="MSpec.Extensions.Model.Bdd.ScenarioStatus">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Model\Bdd\ScenarioStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

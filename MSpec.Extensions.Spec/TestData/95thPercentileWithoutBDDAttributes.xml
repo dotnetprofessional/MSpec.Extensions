@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"?>
+<BddModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Epics>
+    <Epic ExecutionTime="0">
+      <Naration>Default</Naration>
+      <Features>
+        <Feature ExecutionTime="0">
+          <Naration>Default</Naration>
+          <Stories>
+            <Story ExecutionTime="0">
+              <Naration>Default</Naration>
+              <Senarios>
+                <Senario Name="Scenario: Calculate status based on targets" ExecutionTime="0">
+                  <Givens>
+                    <GivenStatement>
+                      <Naration />
+                      <Whens>
+                        <WhenStatement>
+                          <Naration>When the value is 0</Naration>
+                          <Thens>
+                            <ThenStatement Name="the status should be green" ExecutionTime="2" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Naration>When the value is 20</Naration>
+                          <Thens>
+                            <ThenStatement Name="the status should be green" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Naration>When the value is 40</Naration>
+                          <Thens>
+                            <ThenStatement Name="the status should be yellow" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Naration>When the value is 0</Naration>
+                          <Thens>
+                            <ThenStatement Name="the status should be red" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Naration>When the value is 20</Naration>
+                          <Thens>
+                            <ThenStatement Name="the status should be red" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Naration>When the value is 40</Naration>
+                          <Thens>
+                            <ThenStatement Name="the status should be yellow" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                      </Whens>
+                    </GivenStatement>
+                  </Givens>
+                </Senario>
+              </Senarios>
+            </Story>
+          </Stories>
+        </Feature>
+      </Features>
+    </Epic>
+  </Epics>
+</BddModel>

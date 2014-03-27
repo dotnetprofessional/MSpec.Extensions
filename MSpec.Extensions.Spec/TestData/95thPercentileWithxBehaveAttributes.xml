@@ -1,0 +1,97 @@
+﻿<?xml version="1.0"?>
+<BddModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Epics>
+    <Epic ExecutionTime="0" TypeName="MSpec.Extensions.xBehave.Spec.SystemHealth.SystemHealthEpic">
+      <Narration>    
+    As a Service Engineer  
+    I want to be able to see the overall health of the service 
+    So that I can gain an understanding of the service health</Narration>
+      <Features>
+        <Feature ExecutionTime="0" TypeName="MSpec.Extensions.xBehave.Spec.SystemHealth.SystemHealthEpic+Jobs_moving_at_expected_speed">
+          <Narration>
+        As a Service Engineer  
+        I want to understand/know whether jobs are moving through the system at the expected speed 
+        So that I can have confidence that the services I monitor are meeting my customer's needs.</Narration>
+          <Stories>
+            <Story ExecutionTime="0" TypeName="MSpec.Extensions.xBehave.Spec.SystemHealth.SystemHealthEpic+Jobs_moving_at_expected_speed+_95th_Percentile">
+              <Narration>
+            As a Service Engineer  
+            I want to see the 95th Percentile of job execution time to completion (E2E) over a defined time period 
+            So that I can have an increased level of confidence that jobs are executing to completion within SLA (this generates a number)</Narration>
+              <Scenarios>
+                <Scenario Name="Scenario: Calculate status based on targets" ExecutionTime="0" TypeName="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets">
+                  <Givens>
+                    <GivenStatement TypeName="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets+Given_green_yellow_red">
+                      <Narration>
+            Given the green range is between zero and 39
+            And the yellow range is between 40 and 89
+            And the red range is 90 or more</Narration>
+                      <Whens>
+                        <WhenStatement>
+                          <Narration>When the value is 0</Narration>
+                          <Thens>
+                            <ThenStatement Name="the status should be green" ExecutionTime="23" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Narration>When the value is 20</Narration>
+                          <Thens>
+                            <ThenStatement Name="the status should be green" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Narration>When the value is 40</Narration>
+                          <Thens>
+                            <ThenStatement Name="the status should be yellow" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                      </Whens>
+                    </GivenStatement>
+                    <GivenStatement TypeName="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets+Given_red_yellow_green">
+                      <Narration>
+            Given the red range is between zero and 39
+            And the yellow range is between 40 and 89
+            And the green range is 90 or more</Narration>
+                      <Whens>
+                        <WhenStatement>
+                          <Narration>When the value is 0</Narration>
+                          <Thens>
+                            <ThenStatement Name="the status should be red" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Narration>When the value is 20</Narration>
+                          <Thens>
+                            <ThenStatement Name="the status should be red" ExecutionTime="1" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                        <WhenStatement>
+                          <Narration>When the value is 40</Narration>
+                          <Thens>
+                            <ThenStatement Name="the status should be yellow" ExecutionTime="2" Status="NotImplemented">
+                              <CapturedOutput />
+                            </ThenStatement>
+                          </Thens>
+                        </WhenStatement>
+                      </Whens>
+                    </GivenStatement>
+                  </Givens>
+                </Scenario>
+              </Scenarios>
+            </Story>
+          </Stories>
+        </Feature>
+      </Features>
+    </Epic>
+  </Epics>
+</BddModel>
