@@ -53,12 +53,37 @@ namespace MSpec.Extensions.Model
                 this.CreateBddModelFromAssembly(a);
             }
 
+            this.CalculateStatistics();
 
             //this.CreateDefaultBddModel();
 
             //this.MergeMSpecModelWithBddModel();
         }
 
+        void CalculateStatistics()
+        {
+            foreach(var e in this.XBehaveModel.Epics)
+                foreach (var f in e.Features)
+                {
+                    foreach (var s in f.Stories)
+                    {
+                        foreach (var s1 in s.Scenarios)
+                        {
+                            foreach (var g in s1.Givens)
+                            {
+                                foreach (var w in g.Whens)
+                                {
+                                    g.Statistics.Update(w.Statistics);
+                                }
+                                s1.Statistics.Update(g.Statistics);
+                            }
+                            s.Statistics.Update(s1.Statistics);
+                        }
+                        f.Statistics.Update(s.Statistics);
+                    }
+                    e.Statistics.Update(f.Statistics);
+                }
+        }
 
         public void ProcessModel(string mspecXmlOutput)
         {
@@ -78,7 +103,6 @@ namespace MSpec.Extensions.Model
             this.DefineEpics(assemblyInstance);
             this.LocateAndAddScenariosToStories(assemblyInstance);
             this.LocateWhensAndAssociateWithGivens(mspecAssembly);
-            //this.DefineStories(assemblyInstance);
         }
 
         private void DefineEpics(System.Reflection.Assembly assemblyInstance)
@@ -234,7 +258,7 @@ namespace MSpec.Extensions.Model
                     var when = new WhenStatement {Narration = c.Name};
                     // Now associate all Thens (its) for the when
                     foreach(var s in c.Specifications)
-                        when.Thens.Add(new ThenStatement{Name = s.Name, CapturedOutput = s.CapturedOutput, Status = this.MapStatus(s.Status), ExecutionTime = s.ExecutionTime});
+                        when.AddThen(new ThenStatement{Name = s.Name, CapturedOutput = s.CapturedOutput, Status = this.MapStatus(s.Status), ExecutionTime = s.ExecutionTime});
 
                     // Associate When to given
                     given.Whens.Add(when);
@@ -249,6 +273,8 @@ namespace MSpec.Extensions.Model
                     return ThenStatus.Pass;
                 case "not-implemented":
                     return ThenStatus.NotImplemented;
+                case "failed":
+                    return ThenStatus.Failed;
                 default:
                     throw new ArgumentException("Unknown status type: " + status);
             }
@@ -283,7 +309,7 @@ namespace MSpec.Extensions.Model
                         {
                             Name = spec.Name,
                             ExecutionTime = spec.ExecutionTime,
-                            Status = this.GetStatus(spec.Status),
+                            Status = this.MapStatus(spec.Status),
                             CapturedOutput = spec.CapturedOutput
                         });
                 }
@@ -291,19 +317,6 @@ namespace MSpec.Extensions.Model
             }
         }
 
-
-        ThenStatus GetStatus(string status)
-        {
-            switch (status)
-            {
-                case "not-implemented":
-                    return ThenStatus.NotImplemented;
-                case "pass":
-                    return ThenStatus.Pass;
-                default:
-                    return ThenStatus.Unknown;
-            }
-        }
 
         void CreateDefaultBddModel()
         {

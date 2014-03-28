@@ -16,25 +16,25 @@
       </context>
       <context name="When the value is 20" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_20" time="1">
         <output></output>
-        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="0">
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="failed" time="0">
           <output></output>
         </specification>
       </context>
       <context name="When the value is 40" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_40" time="1">
         <output></output>
-        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="not-implemented" time="0">
+        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="pass" time="0">
           <output></output>
         </specification>
       </context>
       <context name="When the value is 0" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_0" time="0">
         <output></output>
-        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="0">
+        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="pass" time="0">
           <output></output>
         </specification>
       </context>
       <context name="When the value is 20" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth.Calculate_status_based_on_targets+Given_red_yellow_green+When_the_value_is_20" time="1">
         <output></output>
-        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="1">
+        <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="pass" time="1">
           <output></output>
         </specification>
       </context>

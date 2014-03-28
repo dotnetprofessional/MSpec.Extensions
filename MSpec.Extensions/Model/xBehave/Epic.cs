@@ -8,6 +8,7 @@ namespace MSpec.Extensions.Model.xBehave
         public Epic()
         {
             Features = new List<Feature>();
+            this.Statistics = new Statistics();
         }
 
         public string Name { get; set; }
@@ -20,5 +21,8 @@ namespace MSpec.Extensions.Model.xBehave
 
         [XmlAttribute]
         public string TypeName { get; set; }
+
+        public Statistics Statistics { get; set; }
+
     }
 }

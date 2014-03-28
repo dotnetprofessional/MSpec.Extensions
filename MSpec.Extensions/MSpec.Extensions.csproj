@@ -54,6 +54,7 @@
     <Compile Include="FeatureStoryAttribute.cs" />
     <Compile Include="Given.cs" />
     <Compile Include="GivenAttribute.cs" />
+    <Compile Include="Model\xBehave\Statistics.cs" />
     <Compile Include="Model\xBehave\xBehaveModel.cs" />
     <Compile Include="Model\Formatter.cs" />
     <Compile Include="Model\xBehaveModeler.cs" />

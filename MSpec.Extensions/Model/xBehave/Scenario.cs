@@ -8,6 +8,7 @@ namespace MSpec.Extensions.Model.xBehave
         public Scenario()
         {
             this.Givens = new List<GivenStatement>();
+            this.Statistics = new Statistics();
         }
 
         [XmlAttribute]
@@ -21,5 +22,7 @@ namespace MSpec.Extensions.Model.xBehave
 
         [XmlAttribute]
         public string TypeName { get; set; }
+
+        public Statistics Statistics { get; set; }
     }
 }

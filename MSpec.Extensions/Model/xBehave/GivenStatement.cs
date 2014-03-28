@@ -8,6 +8,7 @@ namespace MSpec.Extensions.Model.xBehave
         public GivenStatement()
         {
             this.Whens = new List<WhenStatement>();
+            this.Statistics = new Statistics();
         }
 
         public string Narration { get; set; }
@@ -16,5 +17,7 @@ namespace MSpec.Extensions.Model.xBehave
 
         [XmlAttribute]
         public string TypeName { get; set; }
+
+        public Statistics Statistics { get; set; }
     }
 }

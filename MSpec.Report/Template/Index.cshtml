@@ -20,14 +20,14 @@ License: Creative Commons Attribution
 <div id="container">
   <header>
 	<div class="width">
-    		<h1><a href="/">light<span>house</span></a></h1>
-       		 <h2>your website slogan here</h2>
+        <h1><a href="/">@Raw(Model.Title.Replace("^", ""))</a></h1>
+        <h2>@Model.SubTitle</h2>
 	</div>
     </header>
     <nav>
 	<div class="width">
   		  <ul>
-            <li class="selected"><a href="index.html">Home</a></li>
+            <li class="selected"><a href="index.html">Summary</a></li>
         	<li ><a href="examples.html">Examples</a></li>
          	   	<li><a href="#">Products</a></li>
           	  	<li><a href="#">Solutions</a></li>
@@ -41,12 +41,54 @@ License: Creative Commons Attribution
         <section id="content">
 <article>
 
-    <h2>Epics</h2>
-
+    <h2>Summary</h2>
 @foreach (var epic in Model.Epics)
 {
-    <h1>@epic.Name</h1>
+    <h3>@epic.Name</h3>
+    <p>@Raw(epic.Narration.ToStory())</p>
+    <table cellspacing="0">
+        <tr>
+            <th align="left">Description</th>
+            <th align="left">Progress</th>
+            <th>Scenarios</th>
+            <th>Success</th>
+            <th>Failed</th>
+            <th>Pending</th>
+            <th>Ignored</th>
+        </tr>
+        @foreach (var feature in epic.Features)
+        {
+            <tr>
+                <td >Feature:&nbsp;@feature.Name</td>
+                <td ><div class="bar"><div style="width: @feature.Statistics.SucessPercent%"></div></div>&nbsp;&nbsp;@feature.Statistics.SucessPercent%</td>
+                <td align="center">@feature.Statistics.Total</td>
+                <td align="center">@feature.Statistics.PassCount</td>
+                <td align="center">@feature.Statistics.FailedCount</td>
+                <td align="center">@feature.Statistics.NotImplementedCount</td>
+                <td align="center">@feature.Statistics.IgnoredCount</td>
+            </tr>
+            foreach (var story in feature.Stories)
+            {
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@story.Name</td>
+                    <td><div class="bar"><div style="width: @story.Statistics.SucessPercent%"></div></div>&nbsp;&nbsp;@story.Statistics.SucessPercent%</td>
+                    <td align="center">@feature.Statistics.Total</td>
+                    <td align="center">@feature.Statistics.PassCount</td>
+                    <td align="center">@story.Statistics.FailedCount</td>
+                    <td align="center">@story.Statistics.NotImplementedCount</td>
+                    <td align="center">@story.Statistics.IgnoredCount</td>
+                </tr>
+            }
+        }
+    </table>
+    <br/>
+}
 
+    @*@foreach (var epic in Model.Epics)
+{
+    <h3>@epic.Name</h3>
+
+    
     <ul>
         @foreach (var feature in epic.Features)
         {
@@ -60,7 +102,7 @@ License: Creative Commons Attribution
 
         }
     </ul>
-}
+}*@
         <h2>Heading H2</h2>
         <h3>Heading H3</h3>
         <h4>Heading H4</h4>
