@@ -23,5 +23,33 @@ namespace MSpec.Extensions.Model
 
             return source;
         }
+
+        public static string ToGiven(this string source)
+        {
+            // Strip out all carriage returns as they will be reformatted
+            source = source.Replace(Environment.NewLine, " ");
+            source = source.Replace("Given", "<B>Given</B>")
+                .Replace("And", "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>And</B>");
+
+            return source;
+        }
+        public static string ToWhen(this string source)
+        {
+            // Strip out all carriage returns as they will be reformatted
+            source = source.Replace(Environment.NewLine, " ");
+            source = source.Replace("When", "")
+                .Replace("And", "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>And</B>");
+
+            return source;
+        }
+        public static string ToThen(this string source)
+        {
+            // Strip out all carriage returns as they will be reformatted
+            source = source.Replace(Environment.NewLine, " ");
+            source = source.Replace("Then", "")
+                .Replace("And", "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>And</B>");
+
+            return source;
+        }
     }
 }

@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <MSpec>
   <generated>
-    <date>Tuesday, March 25, 2014</date>
-    <time>3:34:11 PM</time>
+    <date>Sunday, March 30, 2014</date>
+    <time>10:46:59 PM</time>
   </generated>
-  <run time="557" />
-  <assembly name="MSpec.Extensions.Spec" location="D:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\bin\Debug\MSpec.Extensions.Spec.dll" time="475">
+  <run time="620" />
+  <assembly name="MSpec.Extensions.Spec" location="D:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\bin\Debug\MSpec.Extensions.Spec.dll" time="538">
     <output></output>
     <concern name="Read MSpec xml output into a Bdd model instance">
-      <context name="When merging the MSpec model the Bdd model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model" time="204">
+      <context name="When merging the MSpec model the Bdd model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model" time="242">
         <output></output>
-        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="passed" time="144">
+        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="passed" time="176">
           <output></output>
         </specification>
         <specification leader="it" name="should have a default feature" field-name="should_have_a_default_feature" status="passed" time="1">
           <output></output>
         </specification>
-        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="passed" time="1">
+        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="passed" time="0">
           <output></output>
         </specification>
-        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="50">
+        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="55">
           <error>
             <type><![CDATA[Machine.Specifications.SpecificationException]]></type>
             <message><![CDATA[Expected 1, but found 0.]]></message>
@@ -31,31 +31,39 @@
           <output></output>
         </specification>
       </context>
-      <context name="When merging the MSpec model the Bdd model " type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model_" time="107">
+      <context name="When merging the MSpec model the Bdd model " type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model_" time="129">
         <output></output>
-        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="passed" time="103">
+        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="passed" time="123">
           <output></output>
         </specification>
         <specification leader="it" name="should have a default feature" field-name="should_have_a_default_feature" status="passed" time="1">
           <output></output>
         </specification>
-        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="passed" time="1">
+        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="passed" time="0">
           <output></output>
         </specification>
-        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="passed" time="1">
+        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="3">
+          <error>
+            <type><![CDATA[Machine.Specifications.SpecificationException]]></type>
+            <message><![CDATA[Expected 1, but found 2.]]></message>
+            <stack-trace><![CDATA[   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs:line 25
+   at FluentAssertions.Execution.AssertionScope.FailWith(String failureMessage, Object[] failureArgs) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Execution\AssertionScope.cs:line 168
+   at FluentAssertions.Numeric.NumericAssertions`1.Be(T expected, String reason, Object[] reasonArgs) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Numeric\NumericAssertions.cs:line 49
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__11() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 80]]></stack-trace>
+          </error>
           <output></output>
         </specification>
       </context>
-      <context name="When reading the xml output the MSpec model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance+When_reading_the_xml_output_the_MSpec_model" time="72">
+      <context name="When reading the xml output the MSpec model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance+When_reading_the_xml_output_the_MSpec_model" time="81">
         <output></output>
-        <specification leader="it" name="should not fail to load" field-name="should_not_fail_to_load" status="failed" time="62">
+        <specification leader="it" name="should not fail to load" field-name="should_not_fail_to_load" status="failed" time="70">
           <error>
             <type><![CDATA[Machine.Specifications.SpecificationException]]></type>
-            <message><![CDATA[Expected object to be <null>, but found System.ArgumentException with message "Unable to locate a given for context type: MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_0"
-     at MSpec.Extensions.Model.xBehaveModeler.MatchContextToGiven(Context c) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 253
-     at MSpec.Extensions.Model.xBehaveModeler.LocateWhensAndAssociateWithGivens(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 222
-     at MSpec.Extensions.Model.xBehaveModeler.CreateBddModelFromAssembly(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 69
-     at MSpec.Extensions.Model.xBehaveModeler.ProcessModel(Stream stream) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 42
+            <message><![CDATA[Expected object to be <null>, but found System.ArgumentException with message "Unable to locate a given for context type: MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Given_green_yellow_red+When_the_value_is_0"
+     at MSpec.Extensions.Model.xBehaveModeler.MatchContextToGiven(Context c) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 298
+     at MSpec.Extensions.Model.xBehaveModeler.LocateWhensAndAssociateWithGivens(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 265
+     at MSpec.Extensions.Model.xBehaveModeler.CreateBddModelFromAssembly(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 105
+     at MSpec.Extensions.Model.xBehaveModeler.ProcessModel(Stream stream) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 53
      at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance.<.ctor>b__2() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs:line 31
      at Machine.Specifications.Catch.Only[TException](Action throwingAction)
 .]]></message>
@@ -69,7 +77,7 @@
         <specification leader="it" name="should have 1 assemblies" field-name="should_have_1_assemblies" status="passed" time="1">
           <output></output>
         </specification>
-        <specification leader="it" name="should have 2 conerns" field-name="should_have_2_conerns" status="passed" time="0">
+        <specification leader="it" name="should have 2 conerns" field-name="should_have_2_conerns" status="passed" time="1">
           <output></output>
         </specification>
         <specification leader="it" name="should have the concern name" field-name="should_have_the_concern_name" status="passed" time="1">

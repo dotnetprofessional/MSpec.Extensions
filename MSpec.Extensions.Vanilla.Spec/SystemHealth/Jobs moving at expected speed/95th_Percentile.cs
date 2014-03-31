@@ -4,62 +4,59 @@ namespace MSpec.Extensions.Vanilla.Spec.SystemHealth
 {
     public class _95th_Percentile
     {
-        public class Calculate_status_based_on_targets
+        [Subject("Scenario: Calculate status based on targets in green yellow red order")]
+        public class Given_green_yellow_red
         {
-            [Subject("Scenario: Calculate status based on targets in green yellow red order")]
-            public class Given_green_yellow_red
+
+            Establish given = () => { };
+
+            public class When_the_value_is_0
             {
+                Because when = () => { };
 
-                Establish given = () => { };
-
-                public class When_the_value_is_0
-                {
-                    Because when = () => { };
-
-                    It the_status_should_be_green;
-                }
-
-                public class When_the_value_is_20
-                {
-                    Because when = () => { };
-
-                    It the_status_should_be_green;
-                }
-
-                public class When_the_value_is_40
-                {
-                    Because when = () => { };
-
-                    It the_status_should_be_yellow;
-                }
+                It the_status_should_be_green;
             }
 
-            [Subject("Scenario: Calculate status based on targets in red yellow green order")]
-            public class Given_red_yellow_green
+            public class When_the_value_is_20
             {
+                Because when = () => { };
 
-                Establish given = () => { };
+                It the_status_should_be_green;
+            }
 
-                public class When_the_value_is_0
-                {
-                    Because when = () => { };
+            public class When_the_value_is_40
+            {
+                Because when = () => { };
 
-                    It the_status_should_be_red;
-                }
+                It the_status_should_be_yellow;
+            }
+        }
 
-                public class When_the_value_is_20
-                {
-                    Because when = () => { };
+        [Subject("Scenario: Calculate status based on targets in red yellow green order")]
+        public class Given_red_yellow_green
+        {
 
-                    It the_status_should_be_red;
-                }
+            Establish given = () => { };
 
-                public class When_the_value_is_40
-                {
-                    Because when = () => { };
+            public class When_the_value_is_0
+            {
+                Because when = () => { };
 
-                    It the_status_should_be_yellow;
-                }
+                It the_status_should_be_red;
+            }
+
+            public class When_the_value_is_20
+            {
+                Because when = () => { };
+
+                It the_status_should_be_red;
+            }
+
+            public class When_the_value_is_40
+            {
+                Because when = () => { };
+
+                It the_status_should_be_yellow;
             }
         }
     }

@@ -237,10 +237,18 @@ namespace MSpec.Extensions.Model
                     story.Scenarios.Add(scenario);
 
                     // Find all Givens nested with this story
-                    var givens = this.GetNestedTypes<GivenAttribute>(s.Type);
-                    foreach (var g in givens)
+                    //var givens = this.GetNestedTypes<GivenAttribute>(s.Type);
+                    //foreach (var g in givens)
+                    //{
+                    //    var given = new GivenStatement {Narration = g.Attribute.Narration, TypeName = g.Type.FullName};
+                    //    scenario.Givens.Add(given);
+                    //    this.Givens.Add(given);
+                    //}
+
+                    var givenAttribute = s.Type.GetCustomAttributes(typeof (GivenAttribute),false).SingleOrDefault() as GivenAttribute;
+                    if(givenAttribute != null)
                     {
-                        var given = new GivenStatement {Narration = g.Attribute.Narration, TypeName = g.Type.FullName};
+                        var given = new GivenStatement {Narration = givenAttribute.Narration, TypeName = s.Type.FullName};
                         scenario.Givens.Add(given);
                         this.Givens.Add(given);
                     }
@@ -275,6 +283,8 @@ namespace MSpec.Extensions.Model
                     return ThenStatus.NotImplemented;
                 case "failed":
                     return ThenStatus.Failed;
+                case "ignored":
+                    return ThenStatus.Ignored;
                 default:
                     throw new ArgumentException("Unknown status type: " + status);
             }

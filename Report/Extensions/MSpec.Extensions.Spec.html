@@ -134,7 +134,7 @@ div.supplement {
   3 contexts,
   16 specifications
   ,
-    <span class="failure">2 failures</span>
+    <span class="failure">3 failures</span>
 </h2>
 <script type="text/javascript">
   function toggleVisibility(id, description)
@@ -154,7 +154,7 @@ div.supplement {
   };
 </script> 
   
-  <em>Generated on Tuesday, March 25, 2014 at 3:34:11 PM.</em>
+  <em>Generated on Sunday, March 30, 2014 at 10:46:59 PM.</em>
   <hr/>
   <hr/>
   
@@ -209,7 +209,7 @@ div.supplement {
       <li class="failure">
       </li>
       <li class="failure">
-        <a href="#9" title="Go to next failed specification">&dArr;</a>
+        <a href="#8" title="Go to next failed specification">&dArr;</a>
       </li>
     </ul>
   </div>
@@ -269,6 +269,25 @@ div.supplement {
           </li>
           <li class="spec"><span id="8">should have 1 scenario</span>
 
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#4" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#9" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    SpecificationException
+  </p>
+  <pre class="exception_message">Machine.Specifications.SpecificationException: Expected 1, but found 2.
+   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs:line 25
+   at FluentAssertions.Execution.AssertionScope.FailWith(String failureMessage, Object[] failureArgs) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Execution\AssertionScope.cs:line 168
+   at FluentAssertions.Numeric.NumericAssertions`1.Be(T expected, String reason, Object[] reasonArgs) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Numeric\NumericAssertions.cs:line 49
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.&lt;.ctor&gt;b__11() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 80</pre>
 
 
 
@@ -291,7 +310,7 @@ div.supplement {
     &lArr; FAILED
     <ul class="prev-next">
       <li class="failure">
-        <a href="#4" title="Go to previous failed specification">&uArr;</a>
+        <a href="#8" title="Go to previous failed specification">&uArr;</a>
       </li>
       <li class="failure">
       </li>
@@ -300,11 +319,11 @@ div.supplement {
   <p class="exception_type">
     SpecificationException
   </p>
-  <pre class="exception_message">Machine.Specifications.SpecificationException: Expected object to be &lt;null&gt;, but found System.ArgumentException with message &quot;Unable to locate a given for context type: MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Calculate_status_based_on_targets+Given_green_yellow_red+When_the_value_is_0&quot;
-     at MSpec.Extensions.Model.xBehaveModeler.MatchContextToGiven(Context c) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 253
-     at MSpec.Extensions.Model.xBehaveModeler.LocateWhensAndAssociateWithGivens(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 222
-     at MSpec.Extensions.Model.xBehaveModeler.CreateBddModelFromAssembly(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 69
-     at MSpec.Extensions.Model.xBehaveModeler.ProcessModel(Stream stream) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 42
+  <pre class="exception_message">Machine.Specifications.SpecificationException: Expected object to be &lt;null&gt;, but found System.ArgumentException with message &quot;Unable to locate a given for context type: MSpec.Extensions.Vanilla.Spec.SystemHealth._95th_Percentile+Given_green_yellow_red+When_the_value_is_0&quot;
+     at MSpec.Extensions.Model.xBehaveModeler.MatchContextToGiven(Context c) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 298
+     at MSpec.Extensions.Model.xBehaveModeler.LocateWhensAndAssociateWithGivens(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 265
+     at MSpec.Extensions.Model.xBehaveModeler.CreateBddModelFromAssembly(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 105
+     at MSpec.Extensions.Model.xBehaveModeler.ProcessModel(Stream stream) in d:\dev\git\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 53
      at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance.&lt;.ctor&gt;b__2() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs:line 31
      at Machine.Specifications.Catch.Only[TException](Action throwingAction)
 .

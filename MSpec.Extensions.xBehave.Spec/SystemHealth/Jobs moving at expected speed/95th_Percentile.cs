@@ -2,10 +2,10 @@
 
 namespace MSpec.Extensions.xBehave.Spec.SystemHealth
 {
-    [Scenario("Calculate status based on targets",
-        typeof(Overall_system_health.Jobs_moving_at_expected_speed._95th_Percentile))]
-    public class Calculate_status_based_on_targets
+    public class _95th_Percentile
     {
+        [Scenario("Calculate status based on targets in green yellow red order",
+            typeof (Overall_system_health.Jobs_moving_at_expected_speed._95th_Percentile))]
         [Given(@"
             Given the green range is between zero and 39
             And the yellow range is between 40 and 89
@@ -37,6 +37,8 @@ namespace MSpec.Extensions.xBehave.Spec.SystemHealth
             }
         }
 
+        [Scenario("Calculate status based on targets in red yellow green order",
+            typeof (Overall_system_health.Jobs_moving_at_expected_speed._95th_Percentile))]
         [Given(@"
             Given the red range is between zero and 39
             And the yellow range is between 40 and 89
@@ -50,7 +52,14 @@ namespace MSpec.Extensions.xBehave.Spec.SystemHealth
             {
                 Because when = () => { };
 
-                It the_status_should_be_red;
+                It should_have_a_status_of_red;
+
+                It should_have_a_red_target_of_39;
+
+                It should_have_a_yellow_target_of_40;
+
+                It should_have_a_green_target_of_90;
+
             }
 
             public class When_the_value_is_20

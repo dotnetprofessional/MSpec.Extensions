@@ -48,6 +48,20 @@ namespace MSpec.Extensions.Model.xBehave
             }
         }
 
+        public ThenStatus Status
+        {
+            get
+            {
+                if (this.FailedCount > 0)
+                    return ThenStatus.Failed;
+                else if (this.IgnoredCount > 0)
+                    return ThenStatus.Ignored;
+                else if (this.PassCount > 0)
+                    return ThenStatus.Pass;
+                else return ThenStatus.NotImplemented;
+            }
+        }
+
         public void Update(Statistics statistics)
         {
             this.PassCount += statistics.PassCount;

@@ -53,11 +53,14 @@
     <Compile Include="EmbeddedResources.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template\CompositeModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Template\Index.cshtml" />
+    <EmbeddedResource Include="Template\Feature.cshtml" />
+    <EmbeddedResource Include="Template\Story.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Report\Vanilla\vanilla.xml">
