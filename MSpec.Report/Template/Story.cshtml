@@ -1,0 +1,179 @@
+﻿@using MSpec.Extensions.Model.xBehave
+@using MSpec.Extensions.Model
+@using RazorEngine.Text
+@inherits RazorEngine.Templating.TemplateBase<MSpec.Report.Template.CompositeModel<Story>>
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>corps - Free CSS Template by ZyPOP</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<!--
+corps, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="width">
+                <h1><a href="/">@Raw(Model.Full.Title.Replace("^", ""))</a></h1>
+                <h2>@Model.Full.SubTitle</h2>
+            </div>
+        </header>
+        <nav>
+            <div class="width">
+                <ul>
+                    <li class="selected"><a href="index.html">Summary</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li class="end"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="body" class="width">
+
+            <section id="content">
+                <article>
+                    <table class="statuspage" cellspacing="0">
+                        <tr>
+                            <td width="20px"><div id="status-@Model.Selected.Statistics.Status" /></td>
+                            <td colspan="3"><h3 name="@Model.Selected.Name">@Model.Selected.Name</h3></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="3"><p>@Raw(Model.Selected.Narration.ToStory())</p></td>
+                        </tr>
+                        @foreach (var scenario in Model.Selected.Scenarios)
+                        {
+                            <tr>
+                                <td><div id="status-@scenario.Statistics.Status" /></td>
+                                <td colspan="3"><h3 name="@scenario.TypeName">Scenario: @scenario.Name</h3></td>
+                            </tr>
+
+                            foreach (var given in scenario.Givens)
+                            {
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3">@Raw(given.Narration.ToGiven())</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3">
+                                        <table cellspacing="0">
+                                            <tr>
+                                                <th align="left">When</th>
+                                                <th align="left">Then</th>
+                                                <th align="left">Status</th>
+                                            </tr>
+                                            @foreach (var when in given.Whens)
+                                            {
+                                                <tr>
+                                                    <td>@Raw(when.Narration.ToWhen())</td>
+                                                    <td>@Raw(when.Thens[0].Name.ToThen())</td>
+                                                    <td nowrap="nowrap"><div id="status-@when.Thens[0].Status"></div><div>&nbsp;&nbsp;@when.Thens[0].Status</div></td>
+                                                </tr>
+
+                                                for (int i = 1; i < when.Thens.Count; i++)
+                                                {
+                                                    <tr>
+                                                        <td>&nbsp;</td>
+                                                        <td>@Raw(when.Thens[i].Name.ToThen())</td>
+                                                        <td nowrap="nowrap"><div id="status-@when.Thens[i].Status"></div><div>&nbsp;&nbsp;@when.Thens[i].Status</div></td>
+                                                    </tr>
+                                                }
+                                            }
+
+                                            @*foreach (var when in given.Whens)
+                                {
+                                    <tr>
+                                        <td></td>
+                                        <td>@Raw(when.Narration.ToWhen())</td>
+                                    </tr>
+
+                                    foreach (var then in when.Thens)
+                                    {
+                                        <tr>
+                                            <td><div id="status-green" /></td>
+                                            <td>@Raw("<B>Then</B> " + then.Name.ToThen())</td>
+                                        </tr>
+                                    }
+                                }*@
+                                            <tr>
+                                                <td colspan="4">&nbsp;</td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            }
+                        }
+                    </table>
+
+            </article>
+        </section>
+
+        <aside class="sidebar">
+
+            <ul>
+                <li>
+                    <h4>Scenarios</h4>
+                    <ul>
+                        @foreach (var scenario in Model.Selected.Scenarios)
+                        {
+                            <li><div id="status-@scenario.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@scenario.TypeName">@scenario.Name</a></li>
+                        }
+                    </ul>
+                </li>
+              </ul>
+        </aside>
+        <div class="clear"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content width">
+            @*<ul>
+            	<li><h4>Proin accumsan</h4></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Blandit elementum</a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+            </ul>
+            
+            <ul>
+            	<li><h4>Condimentum</h4></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Cras dictum</a></li>
+            </ul>
+            
+            <ul class="endfooter">
+            	<li><h4>Suspendisse</h4></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+                <li><a href="#">Donec in ligula nisl.</a></li>
+            </ul>
+            
+            <div class="clear"></div>*@
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; YourSite 2013. <a href="http://zypopwebtemplates.com/">Free CSS Web Templates</a> by ZyPOP</p>
+         </div>
+    </footer>
+</div>
+</body>
+</html>
