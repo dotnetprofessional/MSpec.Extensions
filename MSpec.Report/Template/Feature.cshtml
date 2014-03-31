@@ -1,0 +1,140 @@
+﻿@using MSpec.Extensions.Model.xBehave
+@using MSpec.Extensions.Model
+@using RazorEngine.Text
+@inherits RazorEngine.Templating.TemplateBase<MSpec.Report.Template.CompositeModel<Feature>>
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>corps - Free CSS Template by ZyPOP</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<!--
+corps, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+</head>
+<body>
+<div id="container">
+  <header>
+	<div class="width">
+        <h1><a href="/">@Raw(Model.Full.Title.Replace("^", ""))</a></h1>
+        <h2>@Model.Full.SubTitle</h2>
+	</div>
+    </header>
+    <nav>
+	<div class="width">
+  		  <ul>
+            <li class="selected"><a href="index.html">Summary</a></li>
+        	<li ><a href="examples.html">Examples</a></li>
+         	   	<li><a href="#">Products</a></li>
+          	  	<li><a href="#">Solutions</a></li>
+          	 	<li class="end"><a href="#">Contact</a></li>
+        	</ul>
+	</div>
+    </nav>
+
+    <div id="body" class="width">
+		
+        <section id="content">
+<article>
+
+    <h3 name="@Model.Selected.Name">@Model.Selected.Name</h3>
+    <p>@Raw(Model.Selected.Narration.ToStory())</p>
+    <table cellspacing="0">
+        <tr>
+            <th align="left">Description</th>
+            <th align="left">Progress</th>
+            <th>Scenarios</th>
+            <th>Success</th>
+            <th>Failed</th>
+            <th>Pending</th>
+            <th>Ignored</th>
+        </tr>
+        @foreach (var story in Model.Selected.Stories)
+        {
+            <tr>
+                <td><div id="status-@story.Statistics.Status"></div>&nbsp;&nbsp;<a href="@(story.TypeName).html">Story:&nbsp;@story.Name</a></td>
+                <td><div class="bar"><div style="width: @story.Statistics.SucessPercent%"></div></div>&nbsp;&nbsp;@story.Statistics.SucessPercent%</td>
+                <td align="center">@story.Statistics.Total</td>
+                <td align="center">@story.Statistics.PassCount</td>
+                <td align="center">@story.Statistics.FailedCount</td>
+                <td align="center">@story.Statistics.NotImplementedCount</td>
+                <td align="center">@story.Statistics.IgnoredCount</td>
+            </tr>
+            foreach (var scenario in story.Scenarios)
+            {
+                <tr>
+                    <td><div id="status-@story.Statistics.Status"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@scenario.Name</td>
+                    <td><div class="bar"><div style="width: @scenario.Statistics.SucessPercent%"></div></div>&nbsp;&nbsp;@scenario.Statistics.SucessPercent%</td>
+                    <td align="center">@scenario.Statistics.Total</td>
+                    <td align="center">@scenario.Statistics.PassCount</td>
+                    <td align="center">@scenario.Statistics.FailedCount</td>
+                    <td align="center">@scenario.Statistics.NotImplementedCount</td>
+                    <td align="center">@scenario.Statistics.IgnoredCount</td>
+                </tr>
+            }
+        }
+    </table>
+    <br/>
+
+    </article>
+        </section>
+        
+        <aside class="sidebar">
+
+           <ul>	
+               <li>
+                    <h4>Stories</h4>
+                    <ul>
+                        @foreach (var story in Model.Selected.Stories)
+                        {
+                            <li><div id="status-@story.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@story.TypeName">@story.Name</a></li>
+                        }
+                    </ul>
+                </li>
+            </ul>
+		
+        </aside>
+    	<div class="clear"></div>
+    </div>
+    <footer>
+        <div class="footer-content width">
+            <ul>
+            	<li><h4>Proin accumsan</h4></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Blandit elementum</a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+            </ul>
+            
+            <ul>
+            	<li><h4>Condimentum</h4></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Cras dictum</a></li>
+            </ul>
+            
+            <ul class="endfooter">
+            	<li><h4>Suspendisse</h4></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+                <li><a href="#">Donec in ligula nisl.</a></li>
+            </ul>
+            
+            <div class="clear"></div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; YourSite 2013. <a href="http://zypopwebtemplates.com/">Free CSS Web Templates</a> by ZyPOP</p>
+         </div>
+    </footer>
+</div>
+</body>
+</html>
