@@ -46,11 +46,15 @@
     <Reference Include="Machine.Specifications.Clr4">
       <HintPath>..\packages\Machine.Specifications.0.7.0\lib\net45\Machine.Specifications.Clr4.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="xpf.IO">
-      <HintPath>..\packages\xpf.IO.0.0.1.2\lib\portable-net45+wp80+win+MonoAndroid10+MonoTouch10\xpf.IO.dll</HintPath>
+      <HintPath>..\packages\xpf.IO.0.0.1.4\lib\portable-net45+wp80+win\xpf.IO.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -69,7 +73,6 @@
     <Compile Include="Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs" />
     <Compile Include="Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs" />
     <Compile Include="Epics\Match_customer_specification.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
