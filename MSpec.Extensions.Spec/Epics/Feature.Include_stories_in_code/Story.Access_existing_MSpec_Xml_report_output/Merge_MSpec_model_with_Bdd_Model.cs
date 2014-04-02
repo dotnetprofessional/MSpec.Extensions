@@ -21,7 +21,7 @@ namespace MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Acce
         ")]
         public class When_merging_the_MSpec_model_the_Bdd_model
         {
-            Given read_file = () =>
+            Establish read_file = () =>
             {
                 Subject = new xBehaveModeler();
                 Exception =
@@ -54,7 +54,7 @@ namespace MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Acce
         ")]
         public class When_merging_the_MSpec_model_the_Bdd_model_
         {
-            Given read_file = () =>
+            Establish read_file = () =>
             {
                 Subject = new xBehaveModeler();
                 Exception =

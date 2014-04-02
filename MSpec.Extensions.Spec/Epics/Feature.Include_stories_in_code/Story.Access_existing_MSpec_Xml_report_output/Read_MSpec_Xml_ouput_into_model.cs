@@ -18,7 +18,7 @@ namespace MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Acce
         static xBehaveModeler Subject;
         static Exception Exception;
 
-        Given given = ()
+        Establish given = ()
             =>
             {
                 Subject = new xBehaveModeler();
