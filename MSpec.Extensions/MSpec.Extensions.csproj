@@ -56,35 +56,13 @@
   <ItemGroup>
     <Compile Include="EpicStoryAttribute.cs" />
     <Compile Include="FeatureStoryAttribute.cs" />
-    <Compile Include="Given.cs" />
     <Compile Include="GivenAttribute.cs" />
-    <Compile Include="Model\xBehave\Statistics.cs" />
-    <Compile Include="Model\xBehave\xBehaveModel.cs" />
-    <Compile Include="Model\Formatter.cs" />
-    <Compile Include="Model\xBehaveModeler.cs" />
-    <Compile Include="Model\xBehave\Epic.cs" />
-    <Compile Include="Model\xBehave\Feature.cs" />
-    <Compile Include="Model\xBehave\GivenStatement.cs" />
-    <Compile Include="Model\xBehave\ThenStatus.cs" />
-    <Compile Include="Model\xBehave\Scenario.cs" />
-    <Compile Include="Model\xBehave\Story.cs" />
-    <Compile Include="Model\xBehave\ThenStatement.cs" />
-    <Compile Include="Model\xBehave\WhenStatement.cs" />
-    <Compile Include="Model\MSpec\Assembly.cs" />
-    <Compile Include="Model\MSpec\Concern.cs" />
-    <Compile Include="Model\MSpec\Context.cs" />
-    <Compile Include="Model\MSpec\Generated.cs" />
-    <Compile Include="Model\MSpec\MSpec.cs" />
-    <Compile Include="Model\MSpec\Runtime.cs" />
-    <Compile Include="Model\MSpec\Specification.cs" />
     <Compile Include="ScenarioAttribute.cs" />
     <Compile Include="StoryAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryType.cs" />
-    <Compile Include="Then_it_should.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Model\xBehave\_Model.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

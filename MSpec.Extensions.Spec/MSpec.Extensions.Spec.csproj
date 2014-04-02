@@ -76,6 +76,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MSpec.Extensions.Model\MSpec.Extensions.Model.csproj">
+      <Project>{57867e9e-41c9-4f22-b8b0-1aaee8688549}</Project>
+      <Name>MSpec.Extensions.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MSpec.Extensions\MSpec.Extensions.csproj">
       <Project>{7a76f010-f1fa-4d2e-9e6e-c5cca128fadd}</Project>
       <Name>MSpec.Extensions</Name>
