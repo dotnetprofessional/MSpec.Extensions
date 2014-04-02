@@ -43,7 +43,7 @@ License: Creative Commons Attribution
                     <table class="statuspage" cellspacing="0">
                         <tr>
                             <td width="20px"><div id="status-@Model.Selected.Statistics.Status" /></td>
-                            <td colspan="3"><h3 name="@Model.Selected.Name">@Model.Selected.Name</h3></td>
+                            <td colspan="3"><h3 name="@Model.Selected.Key">@Model.Selected.Name</h3></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -53,7 +53,7 @@ License: Creative Commons Attribution
                         {
                             <tr>
                                 <td><div id="status-@scenario.Statistics.Status" /></td>
-                                <td colspan="3"><h3 name="@scenario.TypeName">Scenario: @scenario.Name</h3></td>
+                                <td colspan="3"><h3 name="@scenario.Key">Scenario: @scenario.Name</h3></td>
                             </tr>
 
                             foreach (var given in scenario.Givens)
@@ -130,7 +130,7 @@ License: Creative Commons Attribution
                     <ul>
                         @foreach (var scenario in Model.Selected.Scenarios)
                         {
-                            <li><div id="status-@scenario.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@scenario.TypeName">@scenario.Name</a></li>
+                            <li><div id="status-@scenario.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@scenario.Key">@scenario.Name</a></li>
                         }
                     </ul>
                 </li>

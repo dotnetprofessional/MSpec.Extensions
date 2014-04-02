@@ -261,15 +261,22 @@ namespace MSpec.Extensions.Model
             foreach(var concern in mspecAssembly.Concerns)
                 foreach (var c in concern.Contexts)
                 {
-                    // Locate the Given to which the conext is associated
-                    var given = this.MatchContextToGiven(c);
-                    var when = new WhenStatement {Narration = c.Name};
-                    // Now associate all Thens (its) for the when
-                    foreach(var s in c.Specifications)
-                        when.AddThen(new ThenStatement{Name = s.Name, CapturedOutput = s.CapturedOutput, Status = this.MapStatus(s.Status), ExecutionTime = s.ExecutionTime});
+                    try
+                    {
+                        // Locate the Given to which the conext is associated
+                        var given = this.MatchContextToGiven(c);
+                        var when = new WhenStatement { Narration = c.Name };
+                        // Now associate all Thens (its) for the when
+                        foreach (var s in c.Specifications)
+                            when.AddThen(new ThenStatement { Name = s.Name, CapturedOutput = s.CapturedOutput, Status = this.MapStatus(s.Status), ExecutionTime = s.ExecutionTime });
 
-                    // Associate When to given
-                    given.Whens.Add(when);
+                        // Associate When to given
+                        given.Whens.Add(when);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
                 }
         }
 
@@ -277,7 +284,7 @@ namespace MSpec.Extensions.Model
         {
             switch (status)
             {
-                case "pass":
+                case "passed":
                     return ThenStatus.Pass;
                 case "not-implemented":
                     return ThenStatus.NotImplemented;

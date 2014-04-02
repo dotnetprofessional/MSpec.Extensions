@@ -15,6 +15,7 @@
     <tags>MSPEC BDD XBEHAVE TDD UNIT TESTING TEST</tags>
   </metadata>
     <files>
-        <file src="..\MSpec.Report\bin\Release\MSpec.Report.exe" target="tools\MSpec.Report.exe" />
+        <file src="..\MSpec.Report\bin\Release\*.exe" target="tools\" />
+        <file src="..\MSpec.Report\bin\Release\*.dll" target="tools\" />
     </files>
 </package>

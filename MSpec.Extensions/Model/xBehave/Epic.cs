@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Xml.Serialization;
 
 namespace MSpec.Extensions.Model.xBehave
@@ -24,5 +25,6 @@ namespace MSpec.Extensions.Model.xBehave
 
         public Statistics Statistics { get; set; }
 
+        public string Key { get { return this.TypeName.GetHashCode().ToString(CultureInfo.InvariantCulture); } }
     }
 }

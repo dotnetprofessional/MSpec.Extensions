@@ -41,7 +41,7 @@ License: Creative Commons Attribution
         <section id="content">
 <article>
 
-    <h3 name="@Model.Selected.Name">@Model.Selected.Name</h3>
+    <h3 name="@Model.Selected.Key">@Model.Selected.Name</h3>
     <p>@Raw(Model.Selected.Narration.ToStory())</p>
     <table cellspacing="0">
         <tr>
@@ -91,7 +91,7 @@ License: Creative Commons Attribution
                     <ul>
                         @foreach (var story in Model.Selected.Stories)
                         {
-                            <li><div id="status-@story.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@story.TypeName">@story.Name</a></li>
+                            <li><div id="status-@story.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@story.Key">@story.Name</a></li>
                         }
                     </ul>
                 </li>

@@ -35,10 +35,10 @@ namespace MSpec.Report
                 xBehaveModelerler.ProcessModel(config);
 
                 xBehaveModel model = xBehaveModelerler.XBehaveModel;
-                CopyTemplateFiles(model);
-
                 if (!Directory.Exists(config.OutputPath))
                     Directory.CreateDirectory(config.OutputPath);
+
+                CopyTemplateFiles(model);
 
                 ExecuteTemplate("Index.cshtml", model.OutputPath, "index.html", model);
                 ExecuteTemplate("examples.cshtml", model.OutputPath, "examples.html", model);

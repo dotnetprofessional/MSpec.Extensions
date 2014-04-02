@@ -14,5 +14,7 @@ namespace MSpec.Extensions.Model.xBehave
 
         [XmlAttribute]
         public ThenStatus Status { get; set; }
+
+
     }
 }

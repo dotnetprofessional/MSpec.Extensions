@@ -16,10 +16,10 @@ namespace MSpec.Extensions.Model
 
         public static string ToStory(this string source)
         {
-            source = source.Replace(Environment.NewLine, "<BR/>");
+            source = source.Replace(Environment.NewLine, " ");
             source = source.Replace("As a", "<B>As a</B>")
-                .Replace("I want", "<B>I want</B>")
-                .Replace("So that", "<B>So that</B>");
+                .Replace("I want", "<br/><B>I want</B>")
+                .Replace("So that", "<br/><B>So that</B>");
 
             return source;
         }
@@ -37,7 +37,7 @@ namespace MSpec.Extensions.Model
         {
             // Strip out all carriage returns as they will be reformatted
             source = source.Replace(Environment.NewLine, " ");
-            source = source.Replace("When", "")
+            source = source.Replace("When", "<b>When</b>")
                 .Replace("And", "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>And</B>");
 
             return source;

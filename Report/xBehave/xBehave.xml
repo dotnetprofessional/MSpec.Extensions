@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <MSpec>
   <generated>
-    <date>Sunday, March 30, 2014</date>
-    <time>10:47:00 PM</time>
+    <date>Monday, March 31, 2014</date>
+    <time>10:50:25 AM</time>
   </generated>
-  <run time="202" />
-  <assembly name="MSpec.Extensions.xBehave.Spec" location="D:\dev\git\MSpec.Extensions\MSpec.Extensions.xBehave.Spec\bin\Debug\MSpec.Extensions.xBehave.Spec.dll" time="134">
+  <run time="189" />
+  <assembly name="MSpec.Extensions.xBehave.Spec" location="D:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.xBehave.Spec\bin\Debug\MSpec.Extensions.xBehave.Spec.dll" time="122">
     <output></output>
     <concern name="Calculate status based on targets in green yellow red order">
-      <context name="When the value is 0" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_green_yellow_red+When_the_value_is_0" time="30">
+      <context name="When the value is 0" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_green_yellow_red+When_the_value_is_0" time="32">
         <output></output>
-        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="24">
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="25">
           <output></output>
         </specification>
       </context>
-      <context name="When the value is 20" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_green_yellow_red+When_the_value_is_20" time="1">
+      <context name="When the value is 20" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_green_yellow_red+When_the_value_is_20" time="0">
         <output></output>
-        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="1">
+        <specification leader="it" name="the status should be green" field-name="the_status_should_be_green" status="not-implemented" time="0">
           <output></output>
         </specification>
       </context>
@@ -30,28 +30,28 @@
     <concern name="Calculate status based on targets in red yellow green order">
       <context name="When the value is 0" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_red_yellow_green+When_the_value_is_0" time="4">
         <output></output>
-        <specification leader="it" name="should have a status of red" field-name="should_have_a_status_of_red" status="pass" time="0">
+        <specification leader="it" name="should have a status of red" field-name="should_have_a_status_of_red" status="not-implemented" time="1">
           <output></output>
         </specification>
-        <specification leader="it" name="should have a red target of 39" field-name="should_have_a_red_target_of_39" status="failed" time="0">
+        <specification leader="it" name="should have a red target of 39" field-name="should_have_a_red_target_of_39" status="not-implemented" time="0">
           <output></output>
         </specification>
-        <specification leader="it" name="should have a yellow target of 40" field-name="should_have_a_yellow_target_of_40" status="ignored" time="0">
+        <specification leader="it" name="should have a yellow target of 40" field-name="should_have_a_yellow_target_of_40" status="not-implemented" time="0">
           <output></output>
         </specification>
         <specification leader="it" name="should have a green target of 90" field-name="should_have_a_green_target_of_90" status="not-implemented" time="0">
           <output></output>
         </specification>
       </context>
-      <context name="When the value is 20" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_red_yellow_green+When_the_value_is_20" time="0">
+      <context name="When the value is 20" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_red_yellow_green+When_the_value_is_20" time="1">
         <output></output>
         <specification leader="it" name="the status should be red" field-name="the_status_should_be_red" status="not-implemented" time="0">
           <output></output>
         </specification>
       </context>
-      <context name="When the value is 40" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_red_yellow_green+When_the_value_is_40" time="1">
+      <context name="When the value is 40" type-name="MSpec.Extensions.xBehave.Spec.SystemHealth._95th_Percentile+Given_red_yellow_green+When_the_value_is_40" time="0">
         <output></output>
-        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="pass" time="1">
+        <specification leader="it" name="the status should be yellow" field-name="the_status_should_be_yellow" status="not-implemented" time="0">
           <output></output>
         </specification>
       </context>

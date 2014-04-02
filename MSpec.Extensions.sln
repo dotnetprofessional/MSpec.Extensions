@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution FIles", "Solution FIles", "{178B46B0-0192-4BD8-94FE-F4843A6EAE49}"
 	ProjectSection(SolutionItems) = preProject
 		BDDReport.bat = BDDReport.bat
+		nugetbuild.bat = nugetbuild.bat
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSpec.Report", "MSpec.Report\MSpec.Report.csproj", "{3D4C8C6B-4B5C-4981-BB10-ACFACF80870B}"

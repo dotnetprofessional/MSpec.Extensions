@@ -42,7 +42,7 @@ License: Creative Commons Attribution
 <article>
 @foreach (var epic in Model.Epics)
 {
-    <h3 name="@epic.Name">@epic.Name</h3>
+    <h3 name="@epic.Key">@epic.Name</h3>
     <p>@Raw(epic.Narration.ToStory())</p>
     <table cellspacing="0">
         <tr>
@@ -92,7 +92,7 @@ License: Creative Commons Attribution
                     <ul>
                         @foreach (var epic in Model.Epics)
                         {
-                            <li><div id="status-@epic.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@epic.TypeName">@epic.Name</a></li>
+                            <li><div id="status-@epic.Statistics.Status"></div>&nbsp;&nbsp;<a href="#@epic.Key">@epic.Name</a></li>
                         }
                     </ul>
                 </li>
