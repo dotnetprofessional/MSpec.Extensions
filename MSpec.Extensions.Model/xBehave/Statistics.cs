@@ -29,6 +29,26 @@ namespace MSpec.Extensions.Model.xBehave
             }
         }
 
+        public int FailPercent
+        {
+            get
+            {
+                if (this.Total == 0)
+                    return 0;
+
+                return (int)(this.FailedCount / (double)this.Total * 100);
+            }
+        }
+        public int IgnoredPercent
+        {
+            get
+            {
+                if (this.Total == 0)
+                    return 0;
+
+                return (int)(this.IgnoredCount / (double)this.Total * 100);
+            }
+        }
         public void Update(ThenStatus status)
         {
             switch (status)

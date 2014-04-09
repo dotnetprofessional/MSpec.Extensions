@@ -132,7 +132,7 @@ namespace MSpec.Extensions.Model
                             var featureAttribute =
                                 nestedFeature.GetCustomAttributes(typeof (FeatureStoryAttribute), false).FirstOrDefault() as FeatureStoryAttribute;
 
-                            var feature = new Feature { Name = this.FormatTypeName(nestedFeature), Narration = featureAttribute.Narration, TypeName = nestedFeature.FullName };
+                            var feature = new Feature { Name = this.FormatTypeName(nestedFeature), Narration = featureAttribute.Narration, TypeName = nestedFeature.FullName, Parent = epic};
                             epic.Features.Add(feature);
 
                             // Now look for stories
@@ -141,7 +141,7 @@ namespace MSpec.Extensions.Model
                                 if (nestedStory.IsDefined(typeof (StoryAttribute), false))
                                 {
                                     var storyAttribute = nestedStory.GetCustomAttributes(typeof (StoryAttribute), false).FirstOrDefault() as StoryAttribute;
-                                    var story = new Story {Name = this.FormatTypeName(nestedStory), Narration = storyAttribute.Narration, TypeName = nestedStory.FullName};
+                                    var story = new Story {Name = this.FormatTypeName(nestedStory), Narration = storyAttribute.Narration, TypeName = nestedStory.FullName, Parent = feature};
                                     feature.Stories.Add(story);
                                     this.Stories.Add(story.TypeName, story);
                                 }
@@ -233,7 +233,7 @@ namespace MSpec.Extensions.Model
                     if (story == null)
                         throw new ArgumentException("Unable to locate story " + s.Attribute.Story.FullName);
 
-                    var scenario = new Scenario { Name = s.Attribute.Name, TypeName = s.Type.FullName };
+                    var scenario = new Scenario { Name = s.Attribute.Name, TypeName = s.Type.FullName, Parent = story};
                     story.Scenarios.Add(scenario);
 
                     // Find all Givens nested with this story

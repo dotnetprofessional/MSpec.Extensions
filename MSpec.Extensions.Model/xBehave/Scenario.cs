@@ -28,5 +28,6 @@ namespace MSpec.Extensions.Model.xBehave
 
         public string Key { get { return this.TypeName.GetHashCode().ToString(CultureInfo.InvariantCulture); } }
 
+        public Story Parent { get; set; }
     }
 }

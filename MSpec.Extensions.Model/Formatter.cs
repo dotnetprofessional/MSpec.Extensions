@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MSpec.Extensions.Model.xBehave;
+using Newtonsoft.Json.Serialization;
 
 namespace MSpec.Extensions.Model
 {
@@ -24,6 +26,36 @@ namespace MSpec.Extensions.Model
             return source;
         }
 
+        public static string ToFormatStatus(this ThenStatus status)
+        {
+            switch (status)
+            {
+                case ThenStatus.Pass:
+                    return "success";
+                case ThenStatus.Failed:
+                    return "danger";
+                case ThenStatus.Ignored:
+                    return "warning";
+                default:
+                    return "info";
+
+            }
+        }
+        public static string ToDisplayStatus(this ThenStatus status)
+        {
+            switch (status)
+            {
+                case ThenStatus.Pass:
+                    return "pass";
+                case ThenStatus.Failed:
+                    return "fail";
+                case ThenStatus.Ignored:
+                    return "ignored";
+                default:
+                    return "pending";
+
+            }
+        }
         public static string ToGiven(this string source)
         {
             // Strip out all carriage returns as they will be reformatted

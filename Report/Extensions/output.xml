@@ -1,129 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <MSpec>
   <generated>
-    <date>Monday, March 31, 2014</date>
-    <time>10:50:24 AM</time>
+    <date>Tuesday, April 1, 2014</date>
+    <time>11:59:39 PM</time>
   </generated>
-  <run time="655" />
-  <assembly name="MSpec.Extensions.Spec" location="D:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\bin\Debug\MSpec.Extensions.Spec.dll" time="523">
+  <run time="548" />
+  <assembly name="MSpec.Extensions.Spec" location="D:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\bin\Debug\MSpec.Extensions.Spec.dll" time="426">
     <output></output>
     <concern name="Read MSpec xml output into a Bdd model instance">
-      <context name="When merging the MSpec model the Bdd model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model" time="211">
+      <context name="When merging the MSpec model the Bdd model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model" time="143">
         <output></output>
-        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="failed" time="194">
+        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="failed" time="126">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have a default feature" field-name="should_have_a_default_feature" status="failed" time="5">
+        <specification leader="it" name="should have a default feature" field-name="should_have_a_default_feature" status="failed" time="1">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="failed" time="1">
+        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="failed" time="4">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="1">
+        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="2">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model.<.ctor>b__0() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 31]]></stack-trace>
           </error>
           <output></output>
         </specification>
       </context>
-      <context name="When merging the MSpec model the Bdd model " type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model_" time="58">
+      <context name="When merging the MSpec model the Bdd model " type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model+When_merging_the_MSpec_model_the_Bdd_model_" time="67">
         <output></output>
-        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="failed" time="52">
+        <specification leader="it" name="should have a default epic" field-name="should_have_a_default_epic" status="failed" time="54">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have a default feature" field-name="should_have_a_default_feature" status="failed" time="2">
+        <specification leader="it" name="should have a default feature" field-name="should_have_a_default_feature" status="failed" time="3">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="failed" time="1">
+        <specification leader="it" name="should have a default story" field-name="should_have_a_default_story" status="failed" time="3">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="1">
+        <specification leader="it" name="should have 1 scenario" field-name="should_have_1_scenario" status="failed" time="5">
           <error>
             <type><![CDATA[System.ArgumentOutOfRangeException]]></type>
             <message><![CDATA[Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index]]></message>
             <stack-trace><![CDATA[   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Merge_MSpec_model_with_Bdd_Model.When_merging_the_MSpec_model_the_Bdd_model_.<.ctor>b__c() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Merge_MSpec_model_with_Bdd_Model.cs:line 64]]></stack-trace>
           </error>
           <output></output>
         </specification>
       </context>
-      <context name="When reading the xml output the MSpec model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance+When_reading_the_xml_output_the_MSpec_model" time="135">
+      <context name="When reading the xml output the MSpec model" type-name="MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance+When_reading_the_xml_output_the_MSpec_model" time="132">
         <output></output>
-        <specification leader="it" name="should not fail to load" field-name="should_not_fail_to_load" status="failed" time="115">
+        <specification leader="it" name="should not fail to load" field-name="should_not_fail_to_load" status="failed" time="114">
           <error>
             <type><![CDATA[Machine.Specifications.SpecificationException]]></type>
-            <message><![CDATA[Expected object to be <null>, but found System.IO.FileNotFoundException with message "Could not load file or assembly 'file:///D:\dev\git\MSpec.Extensions\MSpec.Extensions.Vanilla.Spec\bin\Debug\MSpec.Extensions.Vanilla.Spec.dll' or one of its dependencies. The system cannot find the file specified."
+            <message><![CDATA[Expected object to be <null>, but found System.IO.FileNotFoundException with message "Could not load file or assembly 'file:///D:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Vanilla.Spec\bin\Debug\MSpec.Extensions.Vanilla.Spec.dll' or one of its dependencies. The system cannot find the file specified."
      at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
      at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
      at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
      at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
      at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-     at MSpec.Extensions.Model.xBehaveModeler.CreateBddModelFromAssembly(Assembly mspecAssembly) in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 101
-     at MSpec.Extensions.Model.xBehaveModeler.ProcessModel(Stream stream) in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions\Model\xBehaveModeler.cs:line 53
-     at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance.<.ctor>b__2() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs:line 31
+     at MSpec.Extensions.Model.xBehaveModeler.CreateBddModelFromAssembly(Assembly mspecAssembly) in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Model\xBehaveModeler.cs:line 101
+     at MSpec.Extensions.Model.xBehaveModeler.ProcessModel(Stream stream) in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Model\xBehaveModeler.cs:line 53
+     at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance.<.ctor>b__2() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs:line 31
      at Machine.Specifications.Catch.Only[TException](Action throwingAction)
 .]]></message>
             <stack-trace><![CDATA[   at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs:line 25
    at FluentAssertions.Execution.AssertionScope.FailWith(String failureMessage, Object[] failureArgs) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Execution\AssertionScope.cs:line 168
    at FluentAssertions.Primitives.ReferenceTypeAssertions`2.BeNull(String reason, Object[] reasonArgs) in d:\Workspaces\FluentAssertions\FluentAssertions.Net35\Primitives\ReferenceTypeAssertions.cs:line 42
-   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance.When_reading_the_xml_output_the_MSpec_model.<.ctor>b__6() in d:\dev\GitHub\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs:line 37]]></stack-trace>
+   at MSpec.Extensions.Spec.Epics.Feature.Include_stories_in_code.Story.Access_existing_MSpec_Xml_report_output.Read_into_MSpec_model_instance.When_reading_the_xml_output_the_MSpec_model.<.ctor>b__6() in d:\dev\git\MSpec.Extensions\MSpec.Extensions.Spec\Epics\Feature.Include_stories_in_code\Story.Access_existing_MSpec_Xml_report_output\Read_MSpec_Xml_ouput_into_model.cs:line 37]]></stack-trace>
           </error>
           <output></output>
         </specification>
-        <specification leader="it" name="should have 1 assemblies" field-name="should_have_1_assemblies" status="passed" time="4">
+        <specification leader="it" name="should have 1 assemblies" field-name="should_have_1_assemblies" status="passed" time="3">
           <output></output>
         </specification>
-        <specification leader="it" name="should have 2 conerns" field-name="should_have_2_conerns" status="passed" time="1">
+        <specification leader="it" name="should have 2 conerns" field-name="should_have_2_conerns" status="passed" time="0">
           <output></output>
         </specification>
-        <specification leader="it" name="should have the concern name" field-name="should_have_the_concern_name" status="passed" time="8">
+        <specification leader="it" name="should have the concern name" field-name="should_have_the_concern_name" status="passed" time="7">
           <output></output>
         </specification>
         <specification leader="it" name="should have 3 contexts" field-name="should_have_3_contexts" status="passed" time="1">
@@ -132,7 +132,7 @@ Parameter name: index]]></message>
         <specification leader="it" name="should have the context name" field-name="should_have_the_context_name" status="passed" time="1">
           <output></output>
         </specification>
-        <specification leader="it" name="should have 1 specification" field-name="should_have_1_specification" status="passed" time="0">
+        <specification leader="it" name="should have 1 specification" field-name="should_have_1_specification" status="passed" time="1">
           <output></output>
         </specification>
         <specification leader="it" name="should have the specification name" field-name="should_have_the_specification_name" status="passed" time="1">

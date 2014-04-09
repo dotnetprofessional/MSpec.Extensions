@@ -25,6 +25,7 @@ namespace MSpec.Report
 
             // Process the command line
             var config = ProcessCommandLine(args);
+            config.OutputPath += @"bs\";
             if (config == null)
                 return;
 
@@ -38,26 +39,8 @@ namespace MSpec.Report
                 if (!Directory.Exists(config.OutputPath))
                     Directory.CreateDirectory(config.OutputPath);
 
-                CopyTemplateFiles(model);
-
-                ExecuteTemplate("Index.cshtml", model.OutputPath, "index.html", model);
-                ExecuteTemplate("examples.cshtml", model.OutputPath, "examples.html", model);
-
-                // create sub pages
-                foreach(var e in model.Epics)
-                    foreach (var f in e.Features)
-                    {
-                        var featureModel = new CompositeModel<Feature> {Full = model, Selected = f};
-                        // Create a page for each feature
-                        ExecuteTemplate("Feature.cshtml", model.OutputPath, string.Format("{0}.html", f.TypeName), featureModel);
-                        foreach (var s in f.Stories)
-                        {
-                            var storyModel = new CompositeModel<Story> { Full = model, Selected = s };
-                            // Create a page for each feature
-                            ExecuteTemplate("Story.cshtml", model.OutputPath, string.Format("{0}.html", s.TypeName), storyModel);
-                        }
-                    }
-
+                //BasicHtmlTemplate(model);
+                BootstrapTemplate(model);
             }
             catch (FileNotFoundException fileNotFound)
             {
@@ -69,6 +52,51 @@ namespace MSpec.Report
                 
                 throw;
             }
+        }
+
+        static void BootstrapTemplate(xBehaveModel model)
+        {
+            ExecuteTemplate("BootstrapTemplate.Summary.cshtml", model.OutputPath, "summary.html", model);
+
+            foreach (var e in model.Epics)
+            {
+                var compositeModel = new CompositeModel<Epic> {Full = model, Selected = e};
+                ExecuteTemplate("BootstrapTemplate.Epic.cshtml", model.OutputPath, string.Format("epic-{0}.html", e.Key), compositeModel);
+                foreach (var f in e.Features)
+                {
+                    var featureModel = new CompositeModel<Feature> { Full = model, Selected = f };
+                    // Create a page for each feature
+                    ExecuteTemplate("BootstrapTemplate.Feature.cshtml", model.OutputPath, string.Format("feature-{0}.html", f.Key), featureModel);
+                    foreach (var s in f.Stories)
+                    {
+                        var storyModel = new CompositeModel<Story> { Full = model, Selected = s };
+                        // Create a page for each feature
+                        ExecuteTemplate("BootstrapTemplate.Story.cshtml", model.OutputPath, string.Format("story-{0}.html", s.Key), storyModel);
+                    }
+                }
+            }
+        }
+        static void BasicHtmlTemplate(xBehaveModel model)
+        {
+            CopyTemplateFiles(model);
+
+            ExecuteTemplate("Index.cshtml", model.OutputPath, "index.html", model);
+            ExecuteTemplate("examples.cshtml", model.OutputPath, "examples.html", model);
+
+            // create sub pages
+            foreach (var e in model.Epics)
+                foreach (var f in e.Features)
+                {
+                    var featureModel = new CompositeModel<Feature> {Full = model, Selected = f};
+                    // Create a page for each feature
+                    ExecuteTemplate("Feature.cshtml", model.OutputPath, string.Format("{0}.html", f.TypeName), featureModel);
+                    foreach (var s in f.Stories)
+                    {
+                        var storyModel = new CompositeModel<Story> {Full = model, Selected = s};
+                        // Create a page for each feature
+                        ExecuteTemplate("Story.cshtml", model.OutputPath, string.Format("{0}.html", s.TypeName), storyModel);
+                    }
+                }
         }
 
         static ReportConfig ProcessCommandLine(string[] args)

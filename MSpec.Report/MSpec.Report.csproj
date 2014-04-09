@@ -57,6 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="BootstrapTemplate\Content\bootstrap-theme.css.map" />
+    <None Include="BootstrapTemplate\Content\bootstrap.css.map" />
+    <EmbeddedResource Include="BootstrapTemplate\Epic.cshtml" />
+    <EmbeddedResource Include="BootstrapTemplate\Feature.cshtml" />
+    <EmbeddedResource Include="BootstrapTemplate\Story.cshtml" />
+    <None Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="BootstrapTemplate\Scripts\jquery-1.9.0.min.map" />
+    <EmbeddedResource Include="BootstrapTemplate\Summary.cshtml" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Template\Index.cshtml" />
     <EmbeddedResource Include="Template\Feature.cshtml" />
@@ -71,6 +81,21 @@
       <Link>Samples\xBehave.xml</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="BootstrapTemplate\banzhow\banzhow.js" />
+    <Content Include="BootstrapTemplate\banzhow\font-awesome.min.css" />
+    <Content Include="BootstrapTemplate\banzhow\plugins.js" />
+    <Content Include="BootstrapTemplate\banzhow\style.css" />
+    <Content Include="BootstrapTemplate\Content\bootstrap-theme.css" />
+    <Content Include="BootstrapTemplate\Content\bootstrap-theme.min.css" />
+    <Content Include="BootstrapTemplate\Content\bootstrap.css" />
+    <Content Include="BootstrapTemplate\Content\bootstrap.min.css" />
+    <Content Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="BootstrapTemplate\Scripts\bootstrap.js" />
+    <Content Include="BootstrapTemplate\Scripts\bootstrap.min.js" />
+    <Content Include="BootstrapTemplate\Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="BootstrapTemplate\Scripts\jquery-1.9.0.js" />
+    <Content Include="BootstrapTemplate\Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Template\Epics.html" />
     <EmbeddedResource Include="Template\examples.cshtml" />
     <EmbeddedResource Include="Template\license.txt" />
     <EmbeddedResource Include="Template\readme and license.txt" />
@@ -87,7 +112,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BootstrapTemplate\" />
+    <Folder Include="BootstrapTemplate\banzhow\fonts\font-awesome\" />
+    <Folder Include="BootstrapTemplate\banzhow\fonts\opensans\" />
+    <Folder Include="BootstrapTemplate\banzhow\fonts\pacifico\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
