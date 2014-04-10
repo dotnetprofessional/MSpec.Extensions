@@ -1,0 +1,205 @@
+﻿@using MSpec.Extensions.Model.xBehave
+@using MSpec.Extensions.Model
+@using RazorEngine.Text
+@inherits RazorEngine.Templating.TemplateBase<xBehaveModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>@Raw(Model.Title)</title>
+
+    <!-- font-awesome -->
+    <link href="banzhow/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link href="css/font-awesome-ie7.css" rel="stylesheet">
+    <![endif]-->
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.css" rel="stylesheet">
+
+    <!-- custom CSS -->
+    <link href="banzhow/style.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+    <link href="css/ie8.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link href="css/ie7.css" rel="stylesheet">
+    <![endif]-->
+
+</head>
+
+<body>
+    <style>
+        .pricing-table .panel-danger {
+            background-color: red !important;
+        }
+
+        .pricing-table .panel-success {
+            background-color: greenyellow !important;
+        }
+
+        .pricing-table .panel-info {
+            background-color: blueviolet !important;
+        }
+    </style>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="default.html">@Model.Title</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="default.html">Epics</a></li>
+                    @*<li><a href="services.html">Services</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Portfolio <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="portfolio-1-col.html">1 Column Portfolio</a></li>
+                                <li><a href="portfolio-2-col.html">2 Column Portfolio</a></li>
+                                <li><a href="portfolio-3-col.html">3 Column Portfolio</a></li>
+                                <li><a href="portfolio-item.html">Single Portfolio Item</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Blog <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-home-1.html">Blog Home</a></li>
+                                <li><a href="blog-post.html">Blog Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Other Pages <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="full-width.html">Full Width Page</a></li>
+                                <li><a href="sidebar.html">Sidebar Page</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="404.html">404</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>*@
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 page-header">
+                    <h1>Epics</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <table class="table">
+
+        @foreach (var e in Model.Epics)
+        {
+            @*<ul class="media-list">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <div class="well well-lg">30%</div>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">@e.Name</h4>
+                            <blockquote>
+                                <p>@Raw(e.Narration.ToStory())</p>
+                            </blockquote>
+                        </div>
+                    </li>
+                </ul>*@
+
+            @*<div class="row">
+                <div class="col-lg-10">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">@e.Name</h3>
+                        </div>
+                        <div class="panel-body">
+                            <blockquote>
+                                <p>@Raw(e.Narration.ToStory())</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+            
+            <tr>
+                <td>@e.Statistics.SucessPercent</td>
+                <td><h3>@e.Name</h3><br/>
+                    <blockquote>
+                        <p>@Raw(e.Narration.ToStory())</p>
+                    </blockquote>                </td>
+            </tr>
+            
+        }
+
+    </table>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <div class="footer-after">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10">©2014 All rights reserved. Designed by Garry McGlennon.</p>
+                <p class="col-md-2 legal"><a href="#" rel="nofollow">Legal Notice</a></p>
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <!-- Switcher -->
+    <script type="text/javascript" src="Scripts/switcher/switcher.js"></script>
+    <link href="Scripts/switcher/switcher.css" rel="stylesheet">
+
+    <div id="switcher-options">
+        <a href="#" class="switcher-btn"><i class="fa fa-cog"></i></a>
+        <small>Switch Theme Colour</small>
+        <ul class="list-unstyled list-inline">
+            <li><a href="#" class="theme-colour default" data-name="default"></a></li>
+            <li><a href="#" class="theme-colour blue" data-name="blue"></a></li>
+            <li><a href="#" class="theme-colour violet" data-name="violet"></a></li>
+            <li><a href="#" class="theme-colour red" data-name="red"></a></li>
+            <li><a href="#" class="theme-colour orange" data-name="orange"></a></li>
+        </ul>
+    </div>
+    <!-- /Switcher -->
+    <!-- JavaScript -->
+    <script type="text/javascript" src="Scripts/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="banzhow/plugins.js"></script>
+    <!--[if lte IE 7]>
+        <script type="text/javascript" src="Scripts/boxsizing/jquery.boxsizing.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="banzhow/banzhow.js"></script>
+</body>
+
+</html>

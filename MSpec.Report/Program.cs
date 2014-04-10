@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Odbc;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MSpec.Extensions.Model;
 using MSpec.Extensions.Model.xBehave;
 using MSpec.Report.Template;
@@ -57,6 +52,7 @@ namespace MSpec.Report
         static void BootstrapTemplate(xBehaveModel model)
         {
             ExecuteTemplate("BootstrapTemplate.Summary.cshtml", model.OutputPath, "summary.html", model);
+            ExecuteTemplate("BootstrapTemplate.Default.cshtml", model.OutputPath, "default.html", model);
 
             foreach (var e in model.Epics)
             {

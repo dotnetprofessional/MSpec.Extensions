@@ -62,6 +62,7 @@
     <EmbeddedResource Include="BootstrapTemplate\Epic.cshtml" />
     <EmbeddedResource Include="BootstrapTemplate\Feature.cshtml" />
     <EmbeddedResource Include="BootstrapTemplate\Story.cshtml" />
+    <EmbeddedResource Include="BootstrapTemplate\Default.cshtml" />
     <None Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.eot" />
     <None Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.woff" />
