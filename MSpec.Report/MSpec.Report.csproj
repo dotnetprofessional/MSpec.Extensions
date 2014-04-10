@@ -86,6 +86,8 @@
     <Content Include="BootstrapTemplate\banzhow\font-awesome.min.css" />
     <Content Include="BootstrapTemplate\banzhow\plugins.js" />
     <Content Include="BootstrapTemplate\banzhow\style.css" />
+    <Content Include="BootstrapTemplate\banzhow\switcher.css" />
+    <Content Include="BootstrapTemplate\banzhow\switcher.js" />
     <Content Include="BootstrapTemplate\Content\bootstrap-theme.css" />
     <Content Include="BootstrapTemplate\Content\bootstrap-theme.min.css" />
     <Content Include="BootstrapTemplate\Content\bootstrap.css" />

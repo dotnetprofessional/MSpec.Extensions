@@ -48,6 +48,25 @@
         .pricing-table .panel-info {
             background-color: blueviolet !important;
         }
+
+        .epic-panel-body {
+            padding: 20px;
+            background:yellow;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border: none;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            height: 120px;
+        }
+
+        .epic-panel-header {
+            width: 120px;
+            height: 120px;
+        }
+
     </style>
 
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -110,53 +129,44 @@
                 </div>
             </div>
         </div>
-        <!-- /.container -->
     </div>
+    <div class="container">
+        <table class="table">
+            @foreach (var e in Model.Epics)
+            {
+                <tr class="table-striped">
+                    <td>
+                        <blockquote class="bg-info">
+                            <p>@Raw(e.Statistics.SucessPercent.ToString())%</p>
+                        </blockquote>
+                    </td>
+                    <td  >
+                        <blockquote class="bg-info">
+                            <h3>@e.Name</h3>
+                            <p>@Raw(e.Narration.ToStory())</p>
+                        </blockquote>
+                    </td>
+                </tr>
 
-    <table class="table">
 
-        @foreach (var e in Model.Epics)
-        {
-            @*<ul class="media-list">
-                    <li class="media">
-                        <a class="pull-left" href="#">
-                            <div class="well well-lg">30%</div>
-                        </a>
-                        <div class="media-body">
-                            <h4 class="media-heading">@e.Name</h4>
-                            <blockquote>
-                                <p>@Raw(e.Narration.ToStory())</p>
-                            </blockquote>
-                        </div>
-                    </li>
-                </ul>*@
-
-            @*<div class="row">
-                <div class="col-lg-10">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">@e.Name</h3>
-                        </div>
-                        <div class="panel-body">
-                            <blockquote>
-                                <p>@Raw(e.Narration.ToStory())</p>
-                            </blockquote>
+                @*<div class="row">
+                    <div class="col-lg-10 ">
+                        <div class="epic-panel-header">
+                            <p>@Raw(e.Statistics.SucessPercent.ToString())%</p>
                         </div>
                     </div>
-                </div>
-            </div>*@
-            
-            <tr>
-                <td>@e.Statistics.SucessPercent</td>
-                <td><h3>@e.Name</h3><br/>
-                    <blockquote>
-                        <p>@Raw(e.Narration.ToStory())</p>
-                    </blockquote>                </td>
-            </tr>
-            
-        }
+                    <div class="col-lg-10 ">
+                        <div class="epic-panel-body">
+                            <h3>@e.Name</h3>
+                            <p>@Raw(e.Narration.ToStory())</p>
+                        </div>
+                    </div>
+                </div>*@
 
-    </table>
+            }
+        </table>
+        <!-- /.container -->
+    </div>
     <!-- /.container -->
 
     <footer>
@@ -177,8 +187,8 @@
     </div>
 
     <!-- Switcher -->
-    <script type="text/javascript" src="Scripts/switcher/switcher.js"></script>
-    <link href="Scripts/switcher/switcher.css" rel="stylesheet">
+    <link href="banzhow/switcher.css" rel="stylesheet" />
+    <script src="banzhow/switcher.js"></script>
 
     <div id="switcher-options">
         <a href="#" class="switcher-btn"><i class="fa fa-cog"></i></a>
