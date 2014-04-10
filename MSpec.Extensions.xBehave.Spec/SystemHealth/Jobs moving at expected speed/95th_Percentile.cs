@@ -7,7 +7,7 @@ namespace MSpec.Extensions.xBehave.Spec.SystemHealth
         [Scenario("Calculate status based on targets in green yellow red order",
             typeof (Overall_system_health.Jobs_moving_at_expected_speed._95th_Percentile))]
         [Given(@"
-            Given the green range is between zero and 39
+            Given the green range is between zero and 39 
             And the yellow range is between 40 and 89
             And the red range is 90 or more")]
         public class Given_green_yellow_red

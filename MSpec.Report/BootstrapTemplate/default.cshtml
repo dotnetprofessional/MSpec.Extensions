@@ -32,7 +32,7 @@
     <!--[if lte IE 7]>
     <link href="css/ie7.css" rel="stylesheet">
     <![endif]-->
-
+    <link href="content/sticky-footer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -51,7 +51,7 @@
 
         .epic-panel-body {
             padding: 20px;
-            background:yellow;
+            background: yellow;
             border-radius: 0;
             -webkit-border-radius: 0;
             -moz-border-radius: 0;
@@ -66,7 +66,6 @@
             width: 120px;
             height: 120px;
         }
-
     </style>
 
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -131,76 +130,62 @@
         </div>
     </div>
     <div class="container">
-        <table class="table">
-            @foreach (var e in Model.Epics)
-            {
-                <tr class="table-striped">
-                    <td>
-                        <blockquote class="bg-info">
-                            <p>@Raw(e.Statistics.SucessPercent.ToString())%</p>
-                        </blockquote>
-                    </td>
-                    <td  >
-                        <blockquote class="bg-info">
-                            <h3>@e.Name</h3>
-                            <p>@Raw(e.Narration.ToStory())</p>
-                        </blockquote>
-                    </td>
-                </tr>
+        @foreach (var e in Model.Epics)
+        {
+            <div class="row">
+                <div class="col-lg-10 ">
+                    <div>
+                        <h3><a href="epic-@(e.Key).html">@e.Name</a><span style="margin: 0px 20px" class="btn status-ind btn-xs btn-@e.Statistics.Status.ToFormatStatus()">@e.Statistics.Status.ToDisplayStatus()</span></h3>
+                        <blockquote>@Raw(e.Narration.ToStory())</blockquote>
+                    </div>
+                </div>
+            </div>
+        }
 
 
-                @*<div class="row">
-                    <div class="col-lg-10 ">
-                        <div class="epic-panel-header">
-                            <p>@Raw(e.Statistics.SucessPercent.ToString())%</p>
+        @*<table class="table">
+                @foreach (var e in Model.Epics)
+                {
+                    <tr class="table-striped">
+                        <td>
+                            <blockquote class="bg-info">
+                                <p>@Raw(e.Statistics.SucessPercent.ToString())%</p>
+                            </blockquote>
+                        </td>
+                        <td  >
+                            <blockquote class="bg-info">
+                                <h3>@e.Name</h3>
+                                <p>@Raw(e.Narration.ToStory())</p>
+                            </blockquote>
+                        </td>
+                    </tr>
+
+
+                    @*<div class="row">
+                        <div class="col-lg-10 ">
+                            <div class="epic-panel-header">
+                                <p>@Raw(e.Statistics.SucessPercent.ToString())%</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 ">
+                            <div class="epic-panel-body">
+                                <h3>@e.Name</h3>
+                                <p>@Raw(e.Narration.ToStory())</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-10 ">
-                        <div class="epic-panel-body">
-                            <h3>@e.Name</h3>
-                            <p>@Raw(e.Narration.ToStory())</p>
-                        </div>
-                    </div>
-                </div>*@
 
             }
-        </table>
+            </table>*@
         <!-- /.container -->
     </div>
     <!-- /.container -->
 
-    <footer>
-        <div class="container">
 
-        </div>
-        <!-- /.container -->
-    </footer>
-
-    <div class="footer-after">
-        <div class="container">
-            <div class="row">
-                <p class="col-md-10">©2014 All rights reserved. Designed by Garry McGlennon.</p>
-                <p class="col-md-2 legal"><a href="#" rel="nofollow">Legal Notice</a></p>
-            </div>
-            <!-- /.row -->
-        </div>
-    </div>
 
     <!-- Switcher -->
     <link href="banzhow/switcher.css" rel="stylesheet" />
     <script src="banzhow/switcher.js"></script>
-
-    <div id="switcher-options">
-        <a href="#" class="switcher-btn"><i class="fa fa-cog"></i></a>
-        <small>Switch Theme Colour</small>
-        <ul class="list-unstyled list-inline">
-            <li><a href="#" class="theme-colour default" data-name="default"></a></li>
-            <li><a href="#" class="theme-colour blue" data-name="blue"></a></li>
-            <li><a href="#" class="theme-colour violet" data-name="violet"></a></li>
-            <li><a href="#" class="theme-colour red" data-name="red"></a></li>
-            <li><a href="#" class="theme-colour orange" data-name="orange"></a></li>
-        </ul>
-    </div>
     <!-- /Switcher -->
     <!-- JavaScript -->
     <script type="text/javascript" src="Scripts/jquery-1.9.0.js"></script>

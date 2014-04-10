@@ -92,6 +92,7 @@
     <Content Include="BootstrapTemplate\Content\bootstrap-theme.min.css" />
     <Content Include="BootstrapTemplate\Content\bootstrap.css" />
     <Content Include="BootstrapTemplate\Content\bootstrap.min.css" />
+    <Content Include="BootstrapTemplate\Content\sticky-footer.css" />
     <Content Include="BootstrapTemplate\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="BootstrapTemplate\Scripts\bootstrap.js" />
     <Content Include="BootstrapTemplate\Scripts\bootstrap.min.js" />
